@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}{{ guest.name }}{% endblock %}
+{% block content %}
+        <div class="guest-view">
+            <h1>Guest Info::</h1>
+            <h2>{{ guest.name }}</h2>
+            <p>{{ guest.email}}</p>
+            <p>{{ guest.booking_details}}</p>
+            <p> Status: {{ guest.status }}</p>
+            <a class="btn btn-outline-info" href="{% url 'index' %}" role="button">Go Back</a>
+        </div>
+{% endblock %}

@@ -11,3 +11,9 @@ def index_view (request):
     }
     url = reverse('index')
     return render(request, 'index.html', context)
+
+
+def guest_view(request, pk):
+    guest = Guest.objects.get(pk=pk)
+    context = {'guest': guest}
+    return render(request, 'guest_view.html', context)

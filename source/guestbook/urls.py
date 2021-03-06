@@ -21,5 +21,6 @@ from webapp import views as webapp_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', webapp_views.index_view, name='index')
+    path('', webapp_views.index_view, name='index'),
+    path('guest/<int:pk>/', webapp_views.guest_view, name='guest')
 ]
