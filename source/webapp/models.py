@@ -8,6 +8,11 @@ class Guest(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Creation Time')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Update Time')
 
+    class Meta:
+        db_table = 'guests'
+        verbose_name = 'Guest'
+        verbose_name_plural = 'Guests'
+
     def __str__(self):
 
         return "{}. {}".format(self.pk, self.name)

@@ -5,6 +5,10 @@
             <h1>GuestBook</h1>
             <p>This is a Guest Book. Here you can add, edit, and delete Guests! Please, enjoy!</p>
         </div>
+
+    {% if not guests %}
+        <h1>No Guests yet</h1>
+    {% endif %}
     {% for guest in guests %}
     <div class="guest">
         <div class="guest-header">
@@ -12,7 +16,7 @@
                 <h2>{{ guest.name }} <span>({{ guest.email }})</span></h2>
             </div>
             <div class="guest-links">
-                <a href="#"><i class="far fa-edit"></i></a>
+                <a href="{% url 'guest-update' guest.id %}"><i class="far fa-edit"></i></a>
                 <a href="#"><i class="fas fa-user-minus"></i></a>
             </div>
         </div>
