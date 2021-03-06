@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+    <div class="header-info-block">
+            <h1>GuestBook</h1>
+            <p>This is a Guest Book. Here you can add, edit, and delete Guests! Please, enjoy!</p>
+        </div>
+    {% for guest in guests %}
+    <div class="guest">
+        <div class="guest-header">
+            <h2>{{ guest.name }} ({{ guest.email }})</h2>
+            <a href="#"><i class="far fa-edit"></i></a>
+            <a href="#"><i class="fas fa-user-minus"></i></a>
+        </div>
+            <p>{{guest.booking_details}}</p>
+            <p>
+                <a href="#">See More...</a>
+            </p>
+            <hr>
+    </div>
+    {% endfor %}
+{% endblock %}
