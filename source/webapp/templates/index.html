@@ -8,9 +8,13 @@
     {% for guest in guests %}
     <div class="guest">
         <div class="guest-header">
-            <h2>{{ guest.name }} ({{ guest.email }})</h2>
-            <a href="#"><i class="far fa-edit"></i></a>
-            <a href="#"><i class="fas fa-user-minus"></i></a>
+            <div class="guest-name">
+                <h2>{{ guest.name }} <span>({{ guest.email }})</span></h2>
+            </div>
+            <div class="guest-links">
+                <a href="#"><i class="far fa-edit"></i></a>
+                <a href="#"><i class="fas fa-user-minus"></i></a>
+            </div>
         </div>
             <p>{{guest.booking_details}}</p>
             <p>
