@@ -4,8 +4,7 @@ from django.urls import reverse
 from webapp.forms import GuestForm
 
 def index_view (request):
-    guests = Guest.objects.all()
-
+    guests = Guest.objects.filter(status='1').order_by('-created_at')
     context = {
         'guests': guests
     }
