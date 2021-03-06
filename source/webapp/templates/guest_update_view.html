@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Add a New Guest{% endblock %}
+{% block title %}Update the Guest info{% endblock %}
 {% block content %}
 <form action='{% url "guest-update" guest.id %}' method="post">
     {% include "guest_form.html" with button_text="Edit" %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block page_header %}Add a new Guest{% endblock page_header %}
+
+{% block content %}
+    <form action="/add/" method="post">
+        {% include "guest_form.html" with button_text="Create" %}
+    </form>
+{% endblock content %}

@@ -18,6 +18,23 @@ def guest_view(request, pk):
     context = {'guest': guest}
     return render(request, 'guest_view.html', context)
 
+def guest_add_view(request):
+    if request.method == "GET": 
+        form = GuestForm()
+        return render(request, 'guest_add_view.html', context={'form': form})
+    elif request.method == "POST": 
+        form = GuestForm(data=request.POST)  
+        if form.is_valid():  
+            guest = Guest.objects.create(
+                name=form.cleaned_data.get('name'),
+                email=form.cleaned_data.get('email'),
+                booking_details=form.cleaned_data.get('booking_details'),
+                status=form.cleaned_data.get('status')
+            )
+            return redirect('guest', pk=guest.id)  
+        return render(request, 'guest_add_view.html', context={'form': form}) 
+
+
 def guest_update_view(request, pk):
    
     guest = get_object_or_404(Guest, id=pk)  
@@ -36,6 +53,7 @@ def guest_update_view(request, pk):
             guest.name = form.cleaned_data.get("name")
             guest.email = form.cleaned_data.get("email")
             guest.booking_details = form.cleaned_data.get("booking_details")
+            guest.status = form.cleaned_data.get("status")
             guest.save()
             return redirect('guest', pk=guest.id)  
 
