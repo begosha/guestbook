@@ -1,0 +1,44 @@
+[
+{
+  "model": "webapp.guest",
+  "pk": 1,
+  "fields": {
+    "name": "Sarah Waynez",
+    "email": "sarah-is-my-boo@gmail.com",
+    "booking_details": "Sarah is coming next year.",
+    "status": "1",
+    "created_at": "2021-03-06T06:32:36.243Z",
+    "updated_at": "2021-03-06T06:32:36.243Z"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 2,
+  "fields": {
+    "name": "Asia Sultanova",
+    "email": "asia@hmail.com",
+    "booking_details": "Baby is also coming",
+    "status": "1",
+    "created_at": "2021-03-06T06:33:17.960Z",
+    "updated_at": "2021-03-06T06:33:17.960Z"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$lHr1I5WZi93V$74Ra0Dig1qiywqw+lkFXvF4YsGKHkpr0xQCupmaXkZE=",
+    "last_login": "2021-03-06T06:08:58.732Z",
+    "is_superuser": true,
+    "username": "gosha",
+    "first_name": "",
+    "last_name": "",
+    "email": "begoshaaaa@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-03-06T06:07:19.679Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
