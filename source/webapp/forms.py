@@ -6,7 +6,7 @@ from webapp.models import Guest
 class GuestForm(forms.ModelForm):
     class Meta:
         model = Guest
-        fields = ('name', 'email', 'booking_details', 'status')
+        fields = ('name', 'email', 'booking_details')
 
 
 class GuestDeleteForm(forms.Form):
