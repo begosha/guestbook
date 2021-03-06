@@ -9,5 +9,3 @@ class GuestForm(forms.ModelForm):
         fields = ('name', 'email', 'booking_details')
 
 
-class GuestDeleteForm(forms.Form):
-    name = forms.CharField(max_length=1000, required=True, label='Enter the name to delete')

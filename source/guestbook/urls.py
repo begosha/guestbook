@@ -9,5 +9,6 @@ urlpatterns = [
     path('', webapp_views.index_view, name='index'),
     path('add/', webapp_views.guest_add_view, name='guest-add'),
     path('guest/<int:pk>/', webapp_views.guest_view, name='guest'),
-    path('<int:pk>/update', webapp_views.guest_update_view, name='guest-update')
+    path('<int:pk>/update', webapp_views.guest_update_view, name='guest-update'),
+    path('<int:pk>/delete', webapp_views.guest_delete_view, name='guest-delete')
 ]

@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from webapp.models import Guest
 from django.urls import reverse
-from webapp.forms import GuestForm, GuestDeleteForm
+from webapp.forms import GuestForm
 
 def index_view (request):
     guests = Guest.objects.all()
@@ -56,3 +56,8 @@ def guest_update_view(request, pk):
 
         return render(request, 'guest_update_view.html', context={'form': form, 'guest': guest}) 
 
+def guest_delete_view(request, pk):
+    guest = get_object_or_404(Guest, id=pk)
+    guest.delete()
+    return redirect('index')
+    
